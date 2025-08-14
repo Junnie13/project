@@ -8,9 +8,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-              <div className="w-4 h-4 border-2 border-white rounded-full"></div>
-            </div>
+            <img 
+              src="/logo.svg" 
+              alt="DataTech Analytics Solutions" 
+              className="w-8 h-8"
+            />
             <div>
               <h1 className="text-xl font-bold text-gray-900">DataTech</h1>
               <p className="text-xs text-red-600 uppercase tracking-wide">Analytics Solutions</p>

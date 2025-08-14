@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DataTech Analytics Solutions Products Website</title>
   </head>
@@ -14,25 +14,30 @@
     <script>
       window.ChatWidgetConfig = {
         webhook: {
-          url: "https://aifellowship.app.n8n.cloud/webhook/90a43301-8867-4a94-8213-606631cd6afd",
+          url: "https://ai-chatbot-test.app.n8n.cloud/webhook/90a43301-8867-4a94-8213-606631cd6afd",
           route: "general",
         },
         branding: {
-          logo: "https://bosar.agency/favicon.png",
-          name: "BoSar Agency", // Your company name
-          welcomeText: "Hi, how may I help?", // Welcome message
-          responseTimeText: "We're usually quick to respond", // Response time message
+          logo: "/logo.svg",
+          name: "DataTech Bot", // Your company name
+          welcomeText: "Hi! How can we help you today?", // Welcome message
+          responseTimeText: "We typically respond within minutes", // Response time message
           poweredBy: {
-            text: "Powered by AIF Academy",
-            link: "https://aif.academy",
+            text: "Powered by Gemini",
+            link: "https://gemini.google.com/app",
           }
         },
         style: {
-          primaryColor: "#D4BFFF", // Primary color
-          secondaryColor: "#6B3FD4", // Secondary color
+          primaryColor: "#dc2626", // Red primary color matching website
+          secondaryColor: "#991b1b", // Darker red for secondary elements
           position: "right", // Position of the widget (left or right)
           backgroundColor: "#FFFFFF", // Background color of the chat widget
-          fontColor: "#333333", // Text color for messages and interface
+          fontColor: "#374151", // Darker gray text color for better readability
+          headerColor: "#dc2626", // Header background color
+          buttonColor: "#dc2626", // Send button and action button color
+          userMessageColor: "#dc2626", // User message bubble color
+          botMessageColor: "#f3f4f6", // Bot message bubble color (light gray)
+          borderRadius: "12px", // Rounded corners to match website style
         },
       };
     </script>
