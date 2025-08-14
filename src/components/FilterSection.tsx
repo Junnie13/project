@@ -24,9 +24,9 @@ const FilterSection: React.FC<FilterSectionProps> = ({
   return (
     <div className="bg-gray-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Industry Filter */}
-          <div className="flex-1">
+          <div>
             <label className="block text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">
               Filter Products by Industry
             </label>
@@ -34,7 +34,7 @@ const FilterSection: React.FC<FilterSectionProps> = ({
               <select
                 value={selectedIndustry}
                 onChange={(e) => onIndustryChange(e.target.value)}
-                className="w-full max-w-md border border-gray-300 rounded-lg px-4 py-3 bg-white text-gray-900 focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors appearance-none cursor-pointer"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 bg-white text-gray-900 focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors appearance-none cursor-pointer"
               >
                 {industries.map((industry) => (
                   <option key={industry} value={industry}>
@@ -50,21 +50,8 @@ const FilterSection: React.FC<FilterSectionProps> = ({
             </div>
           </div>
 
-          {/* Clear Filters */}
-          <div className="flex items-center">
-            {(selectedIndustry !== 'All Industries' || selectedLetter !== 'All') && (
-              <button
-                onClick={onClearFilters}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors"
-              >
-                <X className="w-4 h-4 mr-2" />
-                Clear Filters
-              </button>
-            )}
-          </div>
-
           {/* Alphabetical Filter */}
-          <div className="flex-1 lg:flex-none">
+          <div>
             <div className="flex items-center justify-between mb-3">
               <label className="text-sm font-semibold text-gray-900 uppercase tracking-wide">
                 Filter Products Alphabetically
@@ -99,6 +86,19 @@ const FilterSection: React.FC<FilterSectionProps> = ({
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Clear Filters - Centered below */}
+        <div className="flex justify-center mt-6">
+          {(selectedIndustry !== 'All Industries' || selectedLetter !== 'All') && (
+            <button
+              onClick={onClearFilters}
+              className="inline-flex items-center px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+            >
+              <X className="w-4 h-4 mr-2" />
+              Clear Filters
+            </button>
+          )}
         </div>
       </div>
     </div>

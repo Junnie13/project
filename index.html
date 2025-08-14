@@ -9,5 +9,33 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Chat Widget -->
+    <script>
+      window.ChatWidgetConfig = {
+        webhook: {
+          url: "https://aifellowship.app.n8n.cloud/webhook/90a43301-8867-4a94-8213-606631cd6afd",
+          route: "general",
+        },
+        branding: {
+          logo: "https://bosar.agency/favicon.png",
+          name: "BoSar Agency", // Your company name
+          welcomeText: "Hi, how may I help?", // Welcome message
+          responseTimeText: "We're usually quick to respond", // Response time message
+          poweredBy: {
+            text: "Powered by AIF Academy",
+            link: "https://aif.academy",
+          }
+        },
+        style: {
+          primaryColor: "#D4BFFF", // Primary color
+          secondaryColor: "#6B3FD4", // Secondary color
+          position: "right", // Position of the widget (left or right)
+          backgroundColor: "#FFFFFF", // Background color of the chat widget
+          fontColor: "#333333", // Text color for messages and interface
+        },
+      };
+    </script>
+    <script src="https://bosar.agency/chat-widget.js"></script>
   </body>
 </html>
